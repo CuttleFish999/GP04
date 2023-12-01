@@ -88,6 +88,9 @@ section#callUs{
     }
 }
 
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link:hover{
+    color: greenyellow !important;
+}
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: yellow !important;
 }
