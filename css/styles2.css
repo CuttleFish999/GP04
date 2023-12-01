@@ -1,0 +1,267 @@
+@charset "UTF-8";
+/* 大區塊設定模板(置中對齊) */
+/* 1.height: 100%;父撐開
+
+    2.display: flex;
+    3.justify-content: center;
+    4.align-items: center;
+    5.flex-direction: column; */
+/* 6.如果不是第一區塊，需在父加上padding 10% */
+/* 元件設定模板 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+html nav#mainNav, body nav#mainNav {
+  background: #132536 !important;
+}
+html nav#mainNav a.navbar-brand, body nav#mainNav a.navbar-brand {
+  font-size: 2em;
+}
+html nav#mainNav div#navbarResponsive li.nav-item, body nav#mainNav div#navbarResponsive li.nav-item {
+  font-size: 1.5em;
+}
+html li a.nav-link:hover, body li a.nav-link:hover {
+  color: yellow;
+  transition: 0.3s;
+}
+
+header#about {
+  height: 100%;
+  background: #fff !important;
+}
+header#about div#member-login-div {
+  display: none;
+  background: #EEE;
+  width: 500px;
+  height: 184px;
+  position: relative;
+  left: 35%;
+  top: -67%;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.8);
+}
+header#about div#member-login-div img#close-login-div {
+  width: 25px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+header#about div#member-login-div h1 {
+  color: #000 !important;
+  padding-left: 4em;
+  line-height: 1.6em;
+}
+header#about div#member-login-div input {
+  width: 400px;
+  font-size: 1.5em;
+  margin: 2px;
+  border-radius: 15px;
+  color: #000;
+}
+header#about div#member-login-div button#login-btn {
+  background: rgba(38, 122, 38, 0.8);
+  font-size: 1.5em;
+  width: 75px;
+  height: 95px;
+  border-radius: 15px;
+  position: absolute;
+  top: 63px;
+  left: 414px;
+}
+header#about div#member-login-div a#forgetPass {
+  position: absolute;
+  bottom: 0;
+  left: 12.5em;
+}
+header#about div#about-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header#about div#about-div h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 600;
+  color: #000;
+}
+header#about div#about-div p {
+  font-size: 1.5em;
+}
+header#about div#about-div a#join-member-btn {
+  color: #fff;
+  background: #ccc;
+  border: 0px;
+}
+header#about div#about-div a#join-member-btn:hover {
+  color: yellow;
+  background: #000;
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+
+section#about-landlord {
+  height: 100%;
+  background: #EEE !important;
+}
+section#about-landlord div#about-landlord-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#about-landlord div#about-landlord-div h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+section#about-landlord div#about-landlord-div p {
+  font-size: 1.5em;
+}
+section#about-landlord div#about-landlord-div ol li {
+  font-size: 1.5em;
+}
+section#about-landlord div#about-landlord-div a#join-landlord-btn {
+  color: #fff !important;
+  background: #ccc !important;
+  border: 0px;
+}
+section#about-landlord div#about-landlord-div a#join-landlord-btn:hover {
+  color: yellow !important;
+  background: #000 !important;
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+
+section#rent-services {
+  height: 100%;
+  background: #fff !important;
+  background: url("/image/head/BG1.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+}
+section#rent-services div#rent-services-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10%;
+}
+section#rent-services div#rent-services-div h1 {
+  color: #000;
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+section#rent-services div#rent-services-div a#rent-services-btn {
+  color: #fff !important;
+  background: #ccc !important;
+  border: 0px;
+}
+section#rent-services div#rent-services-div a#rent-services-btn:hover {
+  color: yellow !important;
+  background: #000 !important;
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+
+section#shop {
+  height: 100%;
+  background: #EEE !important;
+}
+section#shop div#shop-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#shop div#shop-div h1 {
+  color: #000;
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+section#shop div#shop-div p {
+  font-size: 1.5em;
+}
+section#shop div#shop-div a#rent-services-btn {
+  color: #fff !important;
+  background: #ccc !important;
+  border: 0px;
+}
+section#shop div#shop-div a#rent-services-btn:hover {
+  color: yellow !important;
+  background: #000 !important;
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+
+section#announcement {
+  height: 100%;
+  background: #fff !important;
+}
+section#announcement div#announcement-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#announcement div#announcement-div h1 {
+  color: #000;
+  font-size: 3em;
+  margin-top: -2em;
+  font-weight: 600;
+}
+section#announcement div#announcement-div a#rent-services-btn {
+  color: #fff !important;
+  background: #ccc !important;
+  border: 0px;
+}
+section#announcement div#announcement-div a#rent-services-btn:hover {
+  color: yellow !important;
+  background: #000 !important;
+  transform: scale(1.5);
+  transition: 0.3s;
+}
+section#announcement div#announcement-ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+section#announcement div#announcement-ol ol li {
+  font-size: 1.5em;
+  color: #000;
+}
+
+section#callUs {
+  height: 80%;
+  background: #EEE !important;
+}
+section#callUs div#callUs-div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section#callUs h1 {
+  color: #000;
+  font-size: 3em;
+  margin-top: -2em;
+  font-weight: 600;
+}
+
+.navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+  color: yellow !important;
+}/*# sourceMappingURL=styles2.css.map */
