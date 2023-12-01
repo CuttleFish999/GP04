@@ -1,333 +1,92 @@
- /* 大區塊設定模板(置中對齊) */
-        /* 1.height: 100%;父撐開
+/* 大區塊設定模板(置中對齊) */
+    /* 1.height: 100%;父撐開
 
-            2.display: flex;
-            3.justify-content: center;
-            4.align-items: center;
-            5.flex-direction: column; */
+    2.display: flex;
+    3.justify-content: center;
+    4.align-items: center;
+    5.flex-direction: column; */
 
-        /* 6.如果不是第一區塊，需在父加上padding 10% */
-        /* 元件設定模板 */
-
-
-// 區塊元素-大小
-$SuperFullPage : 100%;
-$loginBlockWidth : 500px;
-// 背景主題-顏色
-$NavBC : #132536;
-$backgroundColor_1 : #fff;
-// linear-gradient(45deg , #e66465, #9198e5);
-$backgroundColor_2 : #EEE;
-// 文字-顏色
-$h1FontColor_1 : #000;
-$h1FontColor_2 : #000;
-$h1FontWeight : 600;
-// 文字-大小
-$h1FontSize : 3em;
-$navbar-brandFrontSize : 2em;
-$NavliFontSize : 1.5em;
-$liFontSize : 1.5em;
-
-$pFontSize : 1.5em;
-// $pFontSize : 1.5em;
-$btnFontSize : 1.5em;
-//按鈕-原始狀態
-$btnBGColor_1:#ccc;
-$btnColor_1: #fff;
-
-$btnBGColor_2:#ccc;
-$btnColor_2: #fff;
-//按鈕-觸發事件rgb(55, 128, 0)
-$btnHoverSpeed : .3s;
-$btnBGHoverColor_1:#000;
-$btnHoverColor_1: yellow;
-
-$btnBGHoverColor_2:#000;
-$btnHoverColor_2: yellow;
-
-//li連結-觸發事件
-$LiHoverColor : yellow;
-$LiHoverColor : yellow;
-$LiHoverSpeed : .3s;
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
-
+    /* 6.如果不是第一區塊，需在父加上padding 10% */
+/* 元件設定模板 */
+$SuperHeight : 100%;
+$BgStyle_1 : #AAA;
+$BgStyle_2 : #DDD;
 
 html,body{
- 
-    height: $SuperFullPage;
-    nav#mainNav {
-        background: $NavBC !important;
-        a.navbar-brand{
-            font-size: $navbar-brandFrontSize;
-        }
-        div#navbarResponsive li.nav-item{
-            font-size: $NavliFontSize;
-        }
-        }
-        li a.nav-link:hover{
-            color: $LiHoverColor ;
-            transition: $LiHoverSpeed ;
-        }
-    }
+    width: $SuperHeight;
+    height: $SuperHeight;
+  
+}
 
+nav a.navbar-brand {
+    font-size: 1.5em;
+    
+    color: white;
+    
+}
+a.navbar-brand::after,
+a.navbar-brand::before {
+    display: inline-block;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5em;
+}
+a.navbar-brand::before {
+    content: "租" !important;
+    color: rgb(16, 246, 16);
+    margin: 1px;
+}
+a.navbar-brand::after {
+    content: "運" !important;
+    color: yellow;
+    margin: -1px;
+}
+nav a.navbar-brand:hover::before{
+    content: "運" !important;
+    color: yellow;
+    
+}
+
+nav a.navbar-brand:hover::after{
+    content: "租" !important;
+    color: rgb(16, 246, 16);
+    // transition: .3s;
+}
+nav a.navbar-brand:hover::before,
+nav a.navbar-brand:hover::after{
+    transition: 1s;
+}
 
 header#about{
-    height: $SuperFullPage;
-    background:$backgroundColor_1 !important;
-
-    // 帳密div
-    div#member-login-div{
-        display: none;
-        background: $backgroundColor_2 ;
-        width: $loginBlockWidth;
-        height: 184px;
-        position: relative;
-        left: 35%;
-        top: -67%;
-        border-radius: 25px;
-        background: rgba(255,255,255,0.8);
-        img#close-login-div{
-            width: 25px;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-        }
-        h1{
-            color: $h1FontColor_2 !important;
-            padding-left: 4em;
-            line-height: 1.6em;
-            
-        }
-        input{
-            width:($loginBlockWidth - 100px) ;
-            font-size: $pFontSize;
-            margin: 2px;
-            border-radius: 15px;
-            color: $h1FontColor_1;
-            // text-align: center;
-        }
-        button#login-btn{
-            background: rgba(38, 122, 38,.8);
-            font-size: $btnFontSize;
-            width: 75px;
-            height: 95px;
-            border-radius: 15px;
-            position: absolute;
-            top: 63px;
-            left: 414px;
-            
-        }
-        a#forgetPass{
-            position: absolute;
-            bottom: 0;
-            left: 12.5em;
-        }
-    }
-
-    div#about-div{
-        height: $SuperFullPage;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-      
-
-        h1{
-            font-size: $h1FontSize;
-            margin-bottom: 1em;
-            font-weight: $h1FontWeight;
-            color: $h1FontColor_1;
-        }
-        p{
-            font-size: $pFontSize;
-        }
-        a#join-member-btn{
-            color: $btnColor_1;
-            background: $btnBGColor_1;
-            border: 0px;
-        }
-        a#join-member-btn:hover{
-            color: $btnHoverColor_1;
-            background: $btnBGHoverColor_1;
-            transform: scale(1.5);
-            transition: $btnHoverSpeed;
-        }
+    height: $SuperHeight;
+    position: relative;
+    background: $BgStyle_1 !important;
+    header#about-div{
+        height: $SuperHeight;
     }
 }
 
-section#about-landlord{
-    height: $SuperFullPage;
-    background:$backgroundColor_2 !important;
-    div#about-landlord-div{
-        height: $SuperFullPage;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        h1{
-            font-size: $h1FontSize;
-            margin-bottom: 1em;
-            font-weight: $h1FontWeight;
-        }
-        p{
-            font-size: $pFontSize;
-        }
-        ol li{
-            font-size: $liFontSize;
-        }
-    
-        a#join-landlord-btn{
-            color: $btnColor_2 !important;
-            background: $btnBGColor_2 !important;
-            border: 0px;
-        }
-        a#join-landlord-btn:hover{
-            color:$btnHoverColor_2 !important ;
-            background: $btnBGHoverColor_2 !important;
-            transform: scale(1.5);
-            transition: $btnHoverSpeed;
-        }
-    }
+header.login_page{
+    display: none !important;
 }
 
-section#rent-services{
-    height: $SuperFullPage;
-    background:$backgroundColor_1 !important;
 
-    background: url('/image/head/BG1.jpg') !important;
-    background-repeat: no-repeat!important;
-    background-size:100% 100%!important;
-    
-    div#rent-services-div{
-        height: $SuperFullPage;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        padding: 10%;
-        h1{
-            color: $h1FontColor_1;
-            font-size: $h1FontSize;
-            margin-bottom: 1em;
-            font-weight: $h1FontWeight;
-        }
-        a#rent-services-btn{
-            color: $btnColor_1 !important;
-            background: $btnBGColor_1 !important;
-            border: 0px;
-        }
-        a#rent-services-btn:hover{
-            color:$btnHoverColor_1 !important ;
-            background: $btnBGHoverColor_1 !important;
-            transform: scale(1.5);
-            transition: $btnHoverSpeed;
-        }
-    }
-}
-
-section#shop{
-    height: $SuperFullPage;
-    background: $backgroundColor_2 !important;
-    div#shop-div{
-        height: $SuperFullPage;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        // padding: 10%;
-        h1{
-            color: $h1FontColor_2;
-            font-size: $h1FontSize;
-            margin-bottom: 1em;
-            font-weight: $h1FontWeight;
-        }
-        p{
-            font-size: $pFontSize;
-        }
-        a#rent-services-btn{
-            color: $btnColor_2 !important;
-            background: $btnBGColor_2 !important;
-            border: 0px;
-        }
-        a#rent-services-btn:hover{
-            color:$btnHoverColor_2 !important ;
-            background: $btnBGHoverColor_2 !important;
-            transform: scale(1.5);
-            transition: $btnHoverSpeed;
-        }
-    }
-}
-
-section#announcement {
-    height: $SuperFullPage;
-    background: $backgroundColor_1 !important;
+section#announcement{
+    height: $SuperHeight;
+    background: $BgStyle_2 !important;
     div#announcement-div{
-        height: $SuperFullPage;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        // padding: 10%;
-        h1{
-            color: $h1FontColor_1;
-            font-size: $h1FontSize;
-            margin-top: -2em;
-            font-weight: $h1FontWeight;
-        }
-        
-        a#rent-services-btn{
-            color: $btnColor_2 !important;
-            background: $btnBGColor_2 !important;
-            border: 0px;
-        }
-        a#rent-services-btn:hover{
-            color:$btnHoverColor_2 !important ;
-            background: $btnBGHoverColor_2 !important;
-            transform: scale(1.5);
-            transition: $btnHoverSpeed;
-        }
-       
-    }
-    div#announcement-ol{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        ol li{
-            font-size: $liFontSize;
-            color: $h1FontColor_1;
-        }
+        height: $SuperHeight;
     }
 }
 
-section#callUs {
-    height: $SuperFullPage - 20%;
-    background: $backgroundColor_2 !important;
+section#callUs{
+    height: $SuperHeight - 25%;
+    background: $BgStyle_1 !important;
+    display: flex;
     div#callUs-div{
-        height: $SuperFullPage;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    h1{
-        color: $h1FontColor_2;
-        font-size: $h1FontSize;
-        margin-top: -2em;
-        font-weight: $h1FontWeight;
+        height: $SuperHeight;
     }
 }
-
-// other
 
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: yellow !important;
