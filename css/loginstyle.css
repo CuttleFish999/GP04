@@ -83,7 +83,8 @@ input {
   border-radius: 5px;
 }
 
-#close-login-div {
+#close-login-div,
+#close-login-div2 {
   position: absolute;
   top: -23px;
   right: 0;
