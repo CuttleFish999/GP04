@@ -125,7 +125,9 @@ input {
 .siginup #fullname:hover {
   color: yellow !important;
 }
-
+.siginup h3 {
+  padding-left: 22px;
+}
 
 header {
   position: relative;
@@ -144,4 +146,8 @@ header {
 .signup_page,
 .login_page {
   display: none;
+}
+
+.super-money {
+  color: gold;
 }/*# sourceMappingURL=loginstyle.css.map */
