@@ -17,7 +17,7 @@ h3,
   width: 200px;
   height: 20px;
   margin: 10px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(12, 94, 3, 0.993);
   border-radius: 25px;
 }
 
@@ -36,14 +36,23 @@ h5:hover {
   padding: 5px;
   width: 230px;
   height: 260px;
+  z-index: 10;
   background-color: white;
   border-radius: 15px;
-  border-top: 25px solid rgba(0, 0, 0, 0.8);
+  border-top: 25px solid rgba(12, 94, 3, 0.993);
   box-shadow: 0 0px 70px rgba(0, 0, 0, 0.1);
   /*定位對齊*/
   position: relative;
   margin: auto;
   top: 50%;
+}
+#container1 .signup,
+#container2 .signup {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .system_name {
@@ -54,9 +63,15 @@ h5:hover {
   text-align: center;
 }
 
+#container2 {
+  position: absolute;
+  top: 31%;
+  left: 41%;
+}
+
 .submit {
   color: white;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(12, 94, 3, 0.993);
   width: 200px;
   height: 30px;
   margin: 10px;
@@ -107,6 +122,10 @@ input {
   align-items: center;
   flex-direction: column;
 }
+.siginup #fullname:hover {
+  color: yellow !important;
+}
+
 
 header {
   position: relative;
@@ -120,4 +139,9 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.signup_page,
+.login_page {
+  display: none;
 }/*# sourceMappingURL=loginstyle.css.map */

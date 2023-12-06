@@ -24,9 +24,14 @@
                     class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto">
-                    <!-- <li class="nav-item"><a class="nav-link" href="#"></a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="/租賃服務.html">租賃服務</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/購物商城.html">購物商城</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">租賃服務</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">購物商城</a></li>
+                    
+                </ul>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                   
                     <li class="nav-item"><a class="nav-link" href="#about" id="join-member-btn2">會員中心</a></li>
                     <li class="nav-item"><a class="nav-link" href="#announcement">公告</a></li>
                     <li class="nav-item"><a class="nav-link" href="#callUs">關於我們</a></li>
@@ -139,6 +144,8 @@
         const join_member_btn = document.querySelector("#join-member-btn");
         const join_member_btn2 = document.querySelector("#join-member-btn2");
         const member_login_div = document.querySelector(".login_page");
+        const member_login_container2 = document.querySelector("#container2");
+
         const fill_bg = document.querySelector("#fill-bg");
         const signup_page = document.querySelector(".signup_page");
 
@@ -199,6 +206,7 @@
         function show_hide(){
             if(show_hideQA){
                 signup_page.style.display = "block";
+                member_login_container2.style.height = "340px"
                 member_login_div.style.display = "none";
             }else{
                 signup_page.style.display = "none";
