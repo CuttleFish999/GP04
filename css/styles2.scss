@@ -44,12 +44,14 @@ a.navbar-brand::after {
 nav a.navbar-brand:hover::before{
     content: "運" !important;
     color: yellow;
+    transform: translateX(2.3em);
     
 }
 
 nav a.navbar-brand:hover::after{
     content: "租" !important;
     color: rgb(16, 246, 16);
+    transform: translateX(-2.3em);
     // transition: .3s;
 }
 nav a.navbar-brand:hover::before,
@@ -90,6 +92,10 @@ section#callUs{
 
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link:hover{
     color: greenyellow !important;
+    font: weight 900px;;
+    transition: .3s;
+    transform: scale(1.1);
+    
 }
 .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
     color: yellow !important;
@@ -141,5 +147,14 @@ section#callUs{
         content: "";
         padding: 0em;
     }
+  }
+  
+  #about-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh; /* 使容器占滿整個視窗高度 */
+    text-align: center;
   }
   
